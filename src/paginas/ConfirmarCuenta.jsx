@@ -16,7 +16,7 @@ const ConfirmarCuenta = () => {
 
     const confirmarCuenta = async () => {
       try {
-        const url = `http://localhost:4000/api/usuarios/confirmar/${id}`
+        const url = `${import.meta.env.VITE_URL}api/usuarios/confirmar/${id}`
         const {data} = await axios(url)
         console.log('data',data)
 

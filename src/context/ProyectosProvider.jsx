@@ -36,7 +36,7 @@ const ProyectosProvider = ({ children }) => {
           },
         };
         const { data } = await axios(
-          "http://localhost:4000/api/proyectos",
+          `${import.meta.env.VITE_URL}api/proyectos`,
           config
         );
         setProyectos(data);
@@ -79,7 +79,7 @@ const ProyectosProvider = ({ children }) => {
       };
 
       const { data } = await axios.put(
-        `http://localhost:4000/api/proyectos/${proyecto.id}`,
+        `${import.meta.env.VITE_URL}api/proyectos/${proyecto.id}`,
         proyecto,
         config
       );
@@ -118,7 +118,7 @@ const ProyectosProvider = ({ children }) => {
       };
 
       const { data } = await axios.post(
-        "http://localhost:4000/api/proyectos",
+      `${import.meta.env.VITE_URL}api/proyectos`,
         proyecto,
         config
       );
@@ -153,7 +153,7 @@ const ProyectosProvider = ({ children }) => {
       };
 
       const { data } = await axios(
-        `http://localhost:4000/api/proyectos/${id}`,
+        `${import.meta.env.VITE_URL}api/proyectos/${id}`,
         config
       );
 
@@ -185,7 +185,7 @@ const ProyectosProvider = ({ children }) => {
       };
 
       const { data } = await axios.delete(
-        `http://localhost:4000/api/proyectos/${id}`,
+        `${import.meta.env.VITE_URL}api/proyectos/${id}`,
         config
       );
 
@@ -233,7 +233,7 @@ const ProyectosProvider = ({ children }) => {
         },
       };
       const { data } = await axios.post(
-        `http://localhost:4000/api/tareas/`,
+        `${import.meta.env.VITE_URL}api/tareas/`,
         tarea,
         config
       );
@@ -263,7 +263,7 @@ const ProyectosProvider = ({ children }) => {
       };
 
       const { data } = await axios.put(
-        `http://localhost:4000/api/tareas/${tarea.id}`,
+        `${import.meta.env.VITE_URL}api/tareas/${tarea.id}`,
         tarea,
         config
       );
@@ -302,7 +302,7 @@ const ProyectosProvider = ({ children }) => {
       };
 
       const { data } = await axios.delete(
-        `http://localhost:4000/api/tareas/${tarea._id}`, config
+        `${import.meta.env.VITE_URL}api/tareas/${tarea._id}`, config
       );
 
       setAlerta({
@@ -338,7 +338,7 @@ const ProyectosProvider = ({ children }) => {
       };
 
       const { data } = await axios.post(
-        `http://localhost:4000/api/proyectos/colaboradores`, {email}, config
+        `${import.meta.env.VITE_URL}api/proyectos/colaboradores`, {email}, config
       );
 
       console.log(data)
@@ -370,7 +370,7 @@ const ProyectosProvider = ({ children }) => {
       };
 
       const { data } = await axios.post(
-        `http://localhost:4000/api/proyectos/colaboradores/${proyecto._id}`, email, config
+        `${import.meta.env.VITE_URL}api/proyectos/colaboradores/${proyecto._id}`, email, config
       );
 
       console.log(data)   
@@ -412,7 +412,7 @@ const ProyectosProvider = ({ children }) => {
       };
 
       const { data } = await axios.post(
-        `http://localhost:4000/api/proyectos/eliminar-colaborador/${proyecto._id}`, {id: colaborador._id}, config
+        `${import.meta.env.VITE_URL}api/proyectos/eliminar-colaborador/${proyecto._id}`, {id: colaborador._id}, config
       );
 
       const proyectoActualizado = {...proyecto}
@@ -443,7 +443,7 @@ const ProyectosProvider = ({ children }) => {
         },
       };
       const { data } = await axios.post(
-        `http://localhost:4000/api/tareas/estado/${id}`, {}, config
+        `${import.meta.env.VITE_URL}api/tareas/estado/${id}`, {}, config
       );
 
       setTarea({})
