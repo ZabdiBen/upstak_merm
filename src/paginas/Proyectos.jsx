@@ -12,7 +12,7 @@ const Proyectos = () => {
 
   useEffect( () => {
     //!No me conecta con import.meta.env.URL
-    socket = io('http://localhost:4000')
+    socket = io(import.meta.env.VITE_URL)
     socket.emit('prueba', proyectos)
 
     socket.on('respuesta', (persona) => {
