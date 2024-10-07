@@ -79,7 +79,7 @@ const ProyectosProvider = ({ children }) => {
       };
 
       const { data } = await axios.put(
-        `${import.meta.env.VITE_URL}api/proyectos/${proyecto.id}`,
+        `${import.meta.env.VITE_URL}/api/proyectos/${proyecto.id}`,
         proyecto,
         config
       );
@@ -118,7 +118,7 @@ const ProyectosProvider = ({ children }) => {
       };
 
       const { data } = await axios.post(
-      `${import.meta.env.VITE_URL}api/proyectos`,
+      `${import.meta.env.VITE_URL}/api/proyectos`,
         proyecto,
         config
       );
@@ -153,7 +153,7 @@ const ProyectosProvider = ({ children }) => {
       };
 
       const { data } = await axios(
-        `${import.meta.env.VITE_URL}api/proyectos/${id}`,
+        `${import.meta.env.VITE_URL}/api/proyectos/${id}`,
         config
       );
 
@@ -185,7 +185,7 @@ const ProyectosProvider = ({ children }) => {
       };
 
       const { data } = await axios.delete(
-        `${import.meta.env.VITE_URL}api/proyectos/${id}`,
+        `${import.meta.env.VITE_URL}/api/proyectos/${id}`,
         config
       );
 
@@ -338,7 +338,7 @@ const ProyectosProvider = ({ children }) => {
       };
 
       const { data } = await axios.post(
-        `${import.meta.env.VITE_URL}api/proyectos/colaboradores`, {email}, config
+        `${import.meta.env.VITE_URL}/api/proyectos/colaboradores`, {email}, config
       );
 
       console.log(data)
@@ -370,7 +370,7 @@ const ProyectosProvider = ({ children }) => {
       };
 
       const { data } = await axios.post(
-        `${import.meta.env.VITE_URL}api/proyectos/colaboradores/${proyecto._id}`, email, config
+        `${import.meta.env.VITE_URL}/api/proyectos/colaboradores/${proyecto._id}`, email, config
       );
 
       console.log(data)   
@@ -412,7 +412,7 @@ const ProyectosProvider = ({ children }) => {
       };
 
       const { data } = await axios.post(
-        `${import.meta.env.VITE_URL}api/proyectos/eliminar-colaborador/${proyecto._id}`, {id: colaborador._id}, config
+        `${import.meta.env.VITE_URL}/api/proyectos/eliminar-colaborador/${proyecto._id}`, {id: colaborador._id}, config
       );
 
       const proyectoActualizado = {...proyecto}
