@@ -14,7 +14,7 @@ const Proyectos = () => {
   useEffect( () => {
     //!No me conecta con import.meta.env.URL
     // socket = io(import.meta.env.VITE_URL)
-    socket = io('https://veterinaria-tau-henna.vercel.app')
+    socket = io('https://waiting-real-snap.glitch.me')
     socket.emit('prueba', proyectos)
 
     socket.on('respuesta', (persona) => {
