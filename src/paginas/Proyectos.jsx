@@ -7,12 +7,14 @@ import io from 'socket.io-client'
 let socket;
 
 const Proyectos = () => {
+
   
   const {proyectos, alerta} = useProyectos()
 
   useEffect( () => {
     //!No me conecta con import.meta.env.URL
-    socket = io(import.meta.env.VITE_URL)
+    // socket = io(import.meta.env.VITE_URL)
+    socket = io('https://veterinaria-tau-henna.vercel.app')
     socket.emit('prueba', proyectos)
 
     socket.on('respuesta', (persona) => {
