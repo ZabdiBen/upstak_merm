@@ -36,7 +36,7 @@ const ProyectosProvider = ({ children }) => {
           },
         };
         const { data } = await axios(
-          `${import.meta.env.VITE_URL}api/proyectos`,
+          `${import.meta.env.VITE_URL}/api/proyectos`,
           config
         );
         setProyectos(data);

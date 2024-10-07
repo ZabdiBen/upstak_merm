@@ -8,7 +8,6 @@ let socket;
 
 const Proyectos = () => {
 
-  
   const {proyectos, alerta} = useProyectos()
 
   useEffect( () => {
