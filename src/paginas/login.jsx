@@ -51,6 +51,13 @@ const Login = () => {
         <span className="text-slate-700"> proyectos</span>
       </h1>
 
+      <div className="my-5" >
+            <h2>Exprimenta mi merm con estas credenciales</h2>
+            <span>zabdi@gmail.com</span>
+            <br />
+            <span>123456z</span>
+      </div>
+
       {msg && <Alerta alerta={alerta} /> }
 
       <form
