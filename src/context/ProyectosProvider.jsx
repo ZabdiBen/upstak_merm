@@ -233,7 +233,7 @@ const ProyectosProvider = ({ children }) => {
         },
       };
       const { data } = await axios.post(
-        `${import.meta.env.VITE_URL}api/tareas/`,
+        `${import.meta.env.VITE_URL}/api/tareas/`,
         tarea,
         config
       );
@@ -263,7 +263,7 @@ const ProyectosProvider = ({ children }) => {
       };
 
       const { data } = await axios.put(
-        `${import.meta.env.VITE_URL}api/tareas/${tarea.id}`,
+        `${import.meta.env.VITE_URL}/api/tareas/${tarea.id}`,
         tarea,
         config
       );
@@ -302,7 +302,7 @@ const ProyectosProvider = ({ children }) => {
       };
 
       const { data } = await axios.delete(
-        `${import.meta.env.VITE_URL}api/tareas/${tarea._id}`, config
+        `${import.meta.env.VITE_URL}/api/tareas/${tarea._id}`, config
       );
 
       setAlerta({
@@ -443,7 +443,7 @@ const ProyectosProvider = ({ children }) => {
         },
       };
       const { data } = await axios.post(
-        `${import.meta.env.VITE_URL}api/tareas/estado/${id}`, {}, config
+        `${import.meta.env.VITE_URL}/api/tareas/estado/${id}`, {}, config
       );
 
       setTarea({})
