@@ -52,7 +52,7 @@ const Login = () => {
       </h1>
 
       <div className="my-5" >
-            <h2>Exprimenta mi merm con estas credenciales</h2>
+            <h2>Exprimenta este proyecto de MERN con estas credenciales</h2>
             <span>zabdi@gmail.com</span>
             <br />
             <span>123456z</span>
